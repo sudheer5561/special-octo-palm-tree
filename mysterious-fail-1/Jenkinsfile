@@ -17,7 +17,7 @@ pipeline {
                 cd mysterious-fail-1
                 docker build . -f Dockerfile.test -t reversing-figlet-test
 
-                docker run --rm -it reversing-figlet-test
+                docker run --rm -i reversing-figlet-test
                 '''
             }
         }
