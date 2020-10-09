@@ -1,0 +1,24 @@
+#groovy
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'docker build . -t reversing-figlet'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'TODO - tests!'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
