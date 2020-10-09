@@ -2,4 +2,4 @@ FROM reversing-figlet
 
 RUN pip install pytest
 
-CMD ['pytest']
+CMD ["pytest"]
