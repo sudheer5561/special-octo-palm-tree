@@ -29,3 +29,11 @@ Of course we have a docker image! Why are you even asking?
            __/ |
           |___/
 
+## Testing
+
+Simply run PyTest.
+
+    pytest
+
+The tests are also executed on our CI infrastructure, so you can keep calm and
+carry on.
