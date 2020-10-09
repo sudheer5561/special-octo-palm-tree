@@ -12,8 +12,13 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'ls'
-                echo 'TODO - tests!'
+                sh '''
+                set -ex
+                cd mysterious-fail-1
+                docker build . -f Dockerfile.test -t reversing-figlet-test
+
+                docker run --rm -it reversing-figlet-test
+                '''
             }
         }
         stage('Deploy') {

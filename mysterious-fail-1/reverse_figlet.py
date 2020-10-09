@@ -3,10 +3,15 @@ import sys
 from pyfiglet import Figlet
 
 
+f = Figlet(font='big')
+
+def render(line):
+    return f.renderText(reversed(line.strip()))
+
+
 def main():
-    f = Figlet(font='big')
     for line in sys.stdin:
-        print(f.renderText(reversed(line.strip())))
+        print(render(line))
 
 if __name__ == "__main__":
     main()
