@@ -2,4 +2,6 @@ FROM reversing-figlet
 
 RUN pip install pytest
 
+USER 113
+
 CMD ["pytest"]
