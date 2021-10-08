@@ -18,7 +18,7 @@ pipeline {
                 docker build . -f Dockerfile.test -t reversing-figlet-test
 
                 docker run --rm -i -v "$(pwd)/build/:/app/build" reversing-figlet-test pytest --junitxml=build/junit.xml
-                chown -R jenkins:jenkins build/junit.xml
+                sudo chown -R jenkins:jenkins build/junit.xml
                 '''
                 junit 'mysterious-fail-1/build/junit.xml'
             }
